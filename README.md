@@ -11,15 +11,15 @@ Peatio workbench is an easy way to start Peatio development environment.
 
 ### Prepare the workbench
 
-0. Run `make init`. It will pull all needed services images, along with
-   `rubykube/peatio` and `rubykube/barong` images that will be used as
-   cache for build to reduce the build time.
-1. Clone [peatio](https://github.com/rubykube/peatio) and [barong](https://github.com/rubykube/barong)
-2. Create links to workbench root (e.g. `ln -s ../../path/to/peatio`)
-3. Build the images: `make build`
-4. Start all services need for peatio: `make prepare`. Make sure mysql server
+1. Run `make init`. It will fetch peatio and barong repositories, pull all needed
+   services images, along with `rubykube/peatio` and `rubykube/barong` images that
+   will be used as cache for build to reduce the build time.
+
+   Later you can run `make init` again to get latest images and repositories versions.
+2. Build the images: `make build`
+3. Start all services need for peatio: `make prepare`. Make sure mysql server
    is running before the next step (check `docker logs workbench_db_1`)
-5. Prepare the database and configs: `make setup-apps`
+4. Prepare the database and configs: `make setup-apps`
 5. To have barong login working with peatio you will need to add this to your `/etc/hosts`:
 
 ```
