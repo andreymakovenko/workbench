@@ -1,6 +1,9 @@
-.PHONY: build prepare run test seed down setup-apps
+.PHONY: init build prepare run test seed down setup-apps
 
 default: run
+
+init:
+	docker-compose pull --parallel
 
 build:
 	docker-compose build peatio barong

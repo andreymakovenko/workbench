@@ -11,6 +11,7 @@ Peatio workbench is an easy way to start Peatio development environment.
 
 ### Prepare the workbench
 
+0. Run `make init`. It will pull all needed services images.
 1. Clone [peatio](https://github.com/rubykube/peatio) and [barong](https://github.com/rubykube/barong)
 2. Create links to workbench root (e.g. `ln -s ../../path/to/peatio`)
 3. Build the images: `make build`
