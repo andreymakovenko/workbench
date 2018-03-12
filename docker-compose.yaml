@@ -1,10 +1,12 @@
-version: '3'
+version: '3.2'
 
 services:
   peatio:
     build:
       context: peatio
       dockerfile: Dockerfile
+      cache_from:
+        - rubukube/peatio:latest
     depends_on:
       - db
       - redis
@@ -42,6 +44,8 @@ services:
     build:
       context: peatio
       dockerfile: Dockerfile
+      cache_from:
+        - rubykube/peatio:latest
     depends_on:
       - db
       - redis
@@ -65,6 +69,8 @@ services:
     build:
       context: peatio
       dockerfile: Dockerfile
+      cache_from:
+        - rubykube/peatio:latest
     depends_on:
       - db
       - redis
@@ -93,6 +99,8 @@ services:
     build:
       context: barong
       dockerfile: Dockerfile
+      cache_from:
+        - rubykube/barong:latest
     depends_on:
       - db
     ports:

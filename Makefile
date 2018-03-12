@@ -4,6 +4,8 @@ default: run
 
 init:
 	docker-compose pull --parallel
+	docker pull rubykube/peatio:latest
+	docker pull rubykube/barong:latest
 
 build:
 	docker-compose build peatio barong
